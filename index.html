@@ -4,26 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=960">
 
-    <title>KIROKU</title>
+    <title>DREAM BOARD</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <div></div>
-        <div class='menu-bar'><
-            /div>
+        <div class="header-top">
+            <h2>DREAM BOARD</h2>
+            <p>Rome was not built in a day.</p>
+        </div>
+        <div class='menu-bar'>
+                <li>
+                    <i class="fas fa-home"></i>
+                    <p>ホーム</p>
+                </li>
+                <li>
+                    <i class="far fa-newspaper"></i>
+                    <p>ジャーナル</p>
+                </li>
+                <li>
+                    <i class="fas fa-dumbbell"></i>
+                    <p>ウォークアウト</p>
+                </li>
+                <li>
+                    <i class="fas fa-lemon"></i>
+                    <p>栄養学</p>
+                </li>
+                <li>
+                    <i class="fas fa-envelope-square"></i>
+                    <p>お問い合わせ</p>
+                </li>
+        </div>
     </header>
 
+    <!-- swiper cssとjqueryをコピペする-->
+    <!-- Slider main container -->
+    <div class="swiper-container">
+    <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="../../HTMLCSS/project-reviced/img/travel.jpg" alt="">
+                Slide 1
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+        </div>
+    <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <main>
+        <section>
+            <ul class='jounal'>
+                <li>
+                    <p>what you are</p>
+                </li>
+                <li>
+                    <p>water a day</p>
+                </li>
+                <li>
+                    <p>Workout</p>
+                </li>
+                <li>
+                    <p>weight & body fat</p>
+                </li>
+            </ul>
+        </section>
+
+        <article>
+            <div>picture 1</div>
+            <div>picture 2</div>
+            <div>picture 3</div>
+        </article>
+
+        <aside>
+            <div>
+                <h3>About Me</h3>
+                <img src="" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, voluptatibus praesentium voluptate tenetur vitae earum atque autem iste temporibus, eius eveniet culpa iure modi nobis cum repellendus rem enim, dolores.</p>
+            </div>
+
+            <nav>
+                <ul class='category'>
+                    <li>Workout</li>
+                    <li>Nutrition</li>
+                </ul>
+            </nav>
+        </aside>
+
+    <div>
+        <ul class='reccoment-list'>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    </main>
+
+    <footer>
+        
+    </footer>
 
 
-
-
-
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src='app.js'></script>
