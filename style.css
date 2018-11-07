@@ -32,6 +32,80 @@ header .menu-bar {
 }
 
 .swiper-container {
-    width: 600px;
+    width: 800px;
     height: 500px;
+}
+
+.swiper-container {
+    background: #f5dfa6;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    width: 500px;
+    margin-right: 20px;
+
+}
+
+aside {
+    width: 300px;
+}
+
+.journal li{
+    background: #9ac29f;
+    padding: 7px;
+    width: 150px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.journal li i{
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background: #23466e;
+    color: #fff;
+    padding: 15px;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+footer section div {
+    margin-right: 10px;
+}
+footer section div:last-child {
+    margin-right: 0;
 }

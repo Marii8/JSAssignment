@@ -1,4 +1,4 @@
-let mySwiper = new Swiper('.swiper-container', {
+let mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters 他にもパラメタをつけたいときは、APIのeffectで確認できる。
         direction: 'vertical',
         loop: true,
