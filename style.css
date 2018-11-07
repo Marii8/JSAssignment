@@ -1,111 +1,79 @@
-body {
-    background: #ebeddf;
-    display: grid;
+
+.top-container {
+    position: relative;
+    background-color: #ddd;
+    width: 100%;
+    height: 100vh;
 }
 
-header .header-top{
-    background: #9ac29f;
-    padding: 15px;
-    text-align: center;
-}
+header {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-header .menu-bar {
-    background: #23466e;
     display: flex;
-    list-style: none;
+    justify-content: space-between;
+
+
+    background-color: rgba(0, 0, 0, .5);
     color: #fff;
+}
 
+.deco {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #f00;
+
+}
+
+#dec1 {
+    position: absolute;
+    top: 100px;
+    left: 260px;
+}
+
+#dec2 {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+}
+
+#dec3 {
+    position: absolute;
+    bottom: 400px;
+    right: 45px;
+}
+
+.header-left,
+.header-right {
+    padding-right: 15px;
+    padding-left: 15px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+}
+
+.top-bg-black {
+    width: 85%;
+    height: 100vh;
+    background: #000;
+
+    position: absolute;
+    top: 0px;
+    right: 0;
 
 }
 
-.menu-bar li {
-    display: flex;
-    padding: 15px;
-    font-size: 14px;
-    cursor: pointer;
-}
+.top-bg {
+    background-image: url(img/inu.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 90vh;
 
-.menu-bar li:hover {
-    background-color: rgba(255, 255, 255, .6);
-}
-
-.swiper-container {
-    width: 800px;
-    height: 500px;
-}
-
-.swiper-container {
-    background: #f5dfa6;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-main {
-    width: 500px;
-    margin-right: 20px;
-
-}
-
-aside {
-    width: 300px;
-}
-
-.journal li{
-    background: #9ac29f;
-    padding: 7px;
-    width: 150px;
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.journal li i{
-    margin-right: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    background: #23466e;
-    color: #fff;
-    padding: 15px;
-}
-
-footer section {
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-}
-
-footer section div {
-    margin-right: 10px;
-}
-footer section div:last-child {
-    margin-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
