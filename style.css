@@ -25,7 +25,7 @@ header {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-color: #f00;
+    color: rgba(255, 255, 255, .8);
 
 }
 
@@ -148,5 +148,11 @@ header {
     padding: 10px;
     font-size: 16px;
 
+}
+
+/*SWIPER*/
+.swiper-container {
+    width: 700px;
+    height: 500px;
 }
 

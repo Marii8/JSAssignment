@@ -1,11 +1,8 @@
-let mySwiper = new Swiper ('.swiper-container', {
+new Swiper('.swiper-container', {
         // Optional parameters 他にもパラメタをつけたいときは、APIのeffectで確認できる。
-        direction: 'vertical',
-        loop: true,
-        effect: 'coverflow',
-        autoHeight: true,
-        stopOnLastSlide: true,
         direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
 
         // If we need pagination
         pagination: {
@@ -22,7 +19,7 @@ let mySwiper = new Swiper ('.swiper-container', {
         scrollbar: {
           el: '.swiper-scrollbar',
         },
-      })
+      });
 
 
 
@@ -43,8 +40,5 @@ $(function(){
     modalBg.fadeOut(500);
     modal.fadeOut(500);
   });
-
-
-
 
 }); //jQueryのおまじない閉じタグ

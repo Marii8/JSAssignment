@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+
 </head>
 <body>
     <div class='top-container'>
         <div class='top-bg-black'></div>
         <div class="top-bg">
             <div class='decoration'>
-                <div id="dec1" class="deco">1</div>
-                <div id="dec2" class="deco">2</div>
-                <div id="dec3" class="deco">3</div>
+                <div id="dec1" class="deco"><i class="fas fa-star fa-2x"></i></div>
+                <div id="dec2" class="deco"><i class="fas fa-dog fa-2x"></i></div>
+                <div id="dec3" class="deco"><i class="fas fa-bone fa-2x"></i></div>
             </div>
             <ul>
                 <h1>Dog Bleeders</h1>
@@ -34,6 +36,50 @@
                 <li id="contact">CONTACT</li>
         </ul>
     </header>
+
+
+    <main>
+        <div>
+            <h2>Bleeder List</h2>
+            <div class="swiper-container">
+
+            <ul class="bl-list swiper-wrapper">
+                <li class="swiper-slide"><img src="img/dog1.jpg" alt="">
+                    <p>sample 123</p>
+                    <a>Read More</a>
+                </li>
+                <li class="swiper-slide"><img src="img/dog2.jpg" alt="">
+                    <p>sample 123</p>
+                    <a>Read More</a>
+                </li>
+                <li class="swiper-slide"><img src="img/dog3.jpg" alt="">
+                    <p>sample 123</p>
+                    <a>Read More</a>
+                </li>
+                <li class="swiper-slide"><img src="img/god4.jpg" alt="">
+                    <p>sample 123</p>
+                    <a>Read More</a>
+                </li>
+                <li class="swiper-slide"><img src="img/dog5.jpg" alt="">
+                    <p>sample 123</p>
+                    <a>Read More</a>
+                </li>
+            </ul>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            </div>
+
+        </div>
+    </main>
+
+
 
 <!-- モーダル -->
 
@@ -53,8 +99,9 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
     <script src='app.js'></script>
 </body>
 </html>
