@@ -92,7 +92,7 @@ header {
 
 /*モーダルスタイル*/
 #modal-bg {
-    /*display: block;*/
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -103,6 +103,7 @@ header {
 }
 
 .modal-content {
+    display: none;
     background: #ddd;
     width: 400px;
     height: 300px;
@@ -133,5 +134,19 @@ header {
 
 .modal-close span {
     cursor: pointer;
+}
+
+.modal-form {
+    display: flex;
+    justify-content: center;
+}
+
+.register {
+    cursor: pointer;
+    background-color: #f00;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+
 }
 

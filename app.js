@@ -23,3 +23,28 @@ let mySwiper = new Swiper ('.swiper-container', {
           el: '.swiper-scrollbar',
         },
       })
+
+
+
+$(function(){
+
+  let contact = $('#contact');
+  let modalBg = $('#modal-bg');
+  let modal = $('.modal-content');
+  let x = $('.js-modal-close');
+
+  contact.on('click', function() {
+    console.log(1);
+    modalBg.fadeIn(1500);
+    modal.fadeIn(1500);
+  });
+
+  x.on('click', function() {
+    modalBg.fadeOut(500);
+    modal.fadeOut(500);
+  });
+
+
+
+
+}); //jQueryのおまじない閉じタグ
