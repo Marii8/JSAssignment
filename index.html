@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=960">
 
     <title>DREAM BOARD</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+<!-- Bootstrap -->
+<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
 </head>
 <body>
@@ -23,49 +25,53 @@
                 <div id="dec3" class="deco"><i class="fas fa-bone fa-2x"></i></div>
             </div>
             <ul>
-                <h1>Dog Bleeders</h1>
+                <h1>No More Petshop!<br></h1>
             </ul>
         </div>
     </div>
     <header>
-        <div class="header-left">
-            <div class='logo-icon'></div>
-            <p class='logo'>EnPuppy</p>
+        <div class='header-content'>
+            <p class='logo'>犬舎辞典</p>
         </div>
-        <ul class="header-right">
-                <li id="contact">CONTACT</li>
-        </ul>
+        <div class="header-content">
+            <p id="contact">CONTACT</p>
+        </div>
     </header>
 
 
     <main>
         <div>
-            <h2>Bleeder List</h2>
+            <h2 class="subtitle">Bleeder List</h2>
             <div class="swiper-container">
 
             <ul class="bl-list swiper-wrapper">
                 <li class="swiper-slide"><img src="img/dog1.jpg" alt="">
-                    <p>sample 123</p>
-                    <a>Read More</a>
+                    <h2>ABC犬舎</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, error!</p>
+                    <button type="button" clas="btn btn-info">Read More</button>
                 </li>
                 <li class="swiper-slide"><img src="img/dog2.jpg" alt="">
-                    <p>sample 123</p>
-                    <a>Read More</a>
+                    <h2>◯◯◯ブリーダー</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, ab!</p>
+                    <button type="button" clas="btn btn-info">Read More</button>
                 </li>
                 <li class="swiper-slide"><img src="img/dog3.jpg" alt="">
-                    <p>sample 123</p>
-                    <a>Read More</a>
+                    <h2>△△訓練センター</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, atque!</p>
+                    <button type="button" clas="btn btn-info">Read More</button>
                 </li>
                 <li class="swiper-slide"><img src="img/god4.jpg" alt="">
-                    <p>sample 123</p>
-                    <a>Read More</a>
+                    <h2>アニマルシェルター</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, repellendus.</p>
+                    <button type="button" clas="btn btn-info">Read More</button>
                 </li>
                 <li class="swiper-slide"><img src="img/dog5.jpg" alt="">
-                    <p>sample 123</p>
-                    <a>Read More</a>
+                    <h2>ABC動物病院</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, aut.</p>
+                    <button type="button" clas="btn btn-info">Read More</button>
                 </li>
             </ul>
-            <!-- If we need pagination -->
+            <!-- If we need pagination
             <div class="swiper-pagination"></div>
 
             <!-- If we need navigation buttons -->
@@ -82,7 +88,7 @@
 
 
 <!-- モーダル -->
-
+<!-- 
     <div class="modal-content">
         <div class="modal-close">
             <span class="js-modal-close">x</span>
@@ -93,15 +99,22 @@
         </form>
     </div>
 
-    <div id="modal-bg" class="js-modal-close"></div>
+    <div id="modal-bg" class="js-modal-close"></div> -->
 
 
 
-
+<!-- Swiper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+<!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-    <script src='app.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
+    <script src='js/app.js'></script>
 </body>
 </html>

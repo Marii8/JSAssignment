@@ -1,9 +1,9 @@
 
 .top-container {
     position: relative;
-    background-color: #ddd;
     width: 100%;
     height: 100vh;
+    background-color: #e1cea3;
 }
 
 header {
@@ -12,14 +12,38 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(179, 211, 172, .5);
+    color: #fff;
 
     display: flex;
     justify-content: space-between;
-
-
-    background-color: rgba(0, 0, 0, .5);
-    color: #fff;
 }
+
+.logo {
+    margin-left: 25px;
+}
+
+#contact {
+    margin-right: 25px;
+    cursor: pointer;
+    padding-right: 25px;
+    padding-left: 25px;
+    height: 100%;
+    line-height: 80px;
+}
+
+#contact:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    color: #0074bf;
+}
+
 
 .deco {
     display: inline-block;
@@ -33,44 +57,34 @@ header {
     position: absolute;
     top: 100px;
     left: 260px;
+    color: rgba(124, 203, 123, 0.6);
 }
 
 #dec2 {
     position: absolute;
     bottom: 100px;
     left: 20px;
+    color: rgba(208, 109, 140, 0.6);
 }
 
 #dec3 {
     position: absolute;
     bottom: 400px;
     right: 45px;
+    color: rgba(242, 207, 1, 0.6);
 }
 
-.header-left,
-.header-right {
-    padding-right: 15px;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
+main {
+    background: #e1cea3;
 }
 
-.header-right li {
-    cursor: pointer;
-    height: 100%;
-    line-height: 80px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 
-.header-right li:hover {
-    background-color: rgba(255, 255, 255, .4);
-}
+
 
 .top-bg-black {
     width: 85%;
     height: 100vh;
-    background: #000;
+    background: linear-gradient(217deg, rgba(179, 211, 172, .8), rgba(214, 133, 176, .8));
 
     position: absolute;
     top: 0px;
@@ -79,12 +93,11 @@ header {
 }
 
 .top-bg {
-    background-image: url(img/inu.jpg);
+    background-image: url(../img/inu.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 90%;
     height: 90vh;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -113,7 +126,6 @@ header {
     right: 50%;
     bottom: 50%;
     left: 50%;
-
     z-index: 5;
 
     border-radius: 10px;
@@ -150,9 +162,20 @@ header {
 
 }
 
-/*SWIPER*/
-.swiper-container {
-    width: 700px;
-    height: 500px;
+.subtitle {
+    font-size: 25px;
+    padding: 15px;
+    text-align: center;
 }
 
+/*SWIPER*/
+.swiper-container {
+    width: 915px;
+    height: 350px;
+}
+
+.bl-list li{
+    padding-right: 5px;
+    box-sizing: border-box;
+    width: 305px;
+}
