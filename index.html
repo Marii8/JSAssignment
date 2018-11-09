@@ -14,6 +14,12 @@
 <!-- Bootstrap -->
 <!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
+<!-- モーダル -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+
+
 </head>
 <body>
     <div class='top-container'>
@@ -22,20 +28,20 @@
             <div class='decoration'>
                 <div class="deco"><i id="dec1" class="fas fa-star fa-2x"></i></div>
                 <div class="deco"><i id="dec2" class="fas fa-dog fa-2x"></i></div>
-                <div class="deco"><i id="dec3" class="fas fa-bone fa-2x"></i></div>
+                <div class="deco"><i id="dec3" class="fas fa-bone fa-2x fa-spin"></i></div>
             </div>
             <ul>
-                <h1>No More Petshop!<br></h1>
+                <h1 class="title">No More Petshop!<br></h1>
             </ul>
         </div>
     </div>
     <header>
         <div class='header-content'>
-            <p class='logo'>犬舎辞典</p>
+            <p class='logo'>LOGO</p>
         </div>
         <ul class="header-content btn-group">
-            <li class="btn js-register">新規登録</li>
-            <li class="btn js-login">ログイン</li>
+            <li class="btn js-message">Message</li>
+            <li class="btn js-login">Login</li>
         </ul>
     </header>
 
@@ -83,7 +89,14 @@
             <div class="swiper-scrollbar"></div>
             </div>
 
+            </div class='user-massage-list'>
+                <h2>皆様からのメッセージ</h2>
+                <ul id="js-user-message">
+                    <li>test</li>
+                </ul>
+            <div>
         </div>
+
     </main>
 
 
@@ -93,9 +106,12 @@
         <div class="modal-close">
             <span class="js-modal-close">x</span>
         </div>
+        <div><h3 class='modal-subtitle js-modal-title'>Login</h3></div>
         <form action="" class="modal-form">
-
-            <button id="js-modal-form-button" class="register">Register</button>
+            <input class="modal-form-email" type="email" placeholder="email">
+            <input class="modal-form-password" type='password' placeholder="password">
+            <textarea id="message" placeholder="message"></textarea>
+            <button type="button" id="js-modal-form-button" class="form-btn message">Submit Message</button>
         </form>
     </div>
 
@@ -106,11 +122,11 @@
 <!-- Swiper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
 <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- modal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <!-- Bootstrap -->
 <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->

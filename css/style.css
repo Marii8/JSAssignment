@@ -64,21 +64,27 @@ header {
     position: absolute;
     top: 100px;
     left: 260px;
-    color: rgba(124, 203, 123, 0.6);
+    color: rgba(124, 203, 123, 0.7);
 }
 
 #dec2 {
     position: absolute;
     bottom: 100px;
     left: 20px;
-    color: rgba(208, 109, 140, 0.6);
+    color: rgba(208, 109, 140, 0.7);
 }
 
 #dec3 {
     position: absolute;
     bottom: 400px;
     right: 45px;
-    color: rgba(242, 207, 1, 0.6);
+    color: rgba(242, 207, 1, 0.7);
+}
+
+.title {
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 280px;
 }
 
 main {
@@ -156,13 +162,39 @@ main {
 }
 
 .modal-form {
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
 }
 
-.register {
+.modal-form input {
+    font-size: 16px;
+    text-indent: 16px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-form textarea {
+    font-size: 16px;
+    text-indent: 16px;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-subtitle {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.form-btn {
     cursor: pointer;
-    background-color: #f00;
+    background-color: skyblue;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
