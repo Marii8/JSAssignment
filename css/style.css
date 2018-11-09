@@ -49,8 +49,8 @@ header {
     display: inline-block;
     width: 30px;
     height: 30px;
-    color: rgba(255, 255, 255, .8);
-
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 #dec1 {

@@ -24,21 +24,29 @@ new Swiper('.swiper-container', {
 
 
 $(function(){
-
-  let contact = $('#contact');
-  let modalBg = $('#modal-bg');
-  let modal = $('.modal-content');
-  let x = $('.js-modal-close');
-
-  contact.on('click', function() {
-    console.log(1);
-    modalBg.fadeIn(1500);
-    modal.fadeIn(1500);
+  $('#contact').on('click', function() {
+    console.log(this.id);
+    $('#modal-bg').fadeIn(600);
+    $('.modal-content').fadeIn(800);
   });
 
   x.on('click', function() {
-    modalBg.fadeOut(500);
+    bg.fadeOut();
     modal.fadeOut(500);
   });
+
+
+$(document).ready(function){
+  $('#contact').on('click', function(){
+    $('#dec1').animate({
+      left: '250px',
+      opacity: '.8',
+      height: '200px',
+    }, slow);
+  });
+};
+
+
+
 
 }); //jQueryのおまじない閉じタグ
