@@ -23,20 +23,27 @@ header {
     margin-left: 25px;
 }
 
-#contact {
+.btn-group {
+    display: flex;
     margin-right: 25px;
-    cursor: pointer;
     padding-right: 25px;
     padding-left: 25px;
     height: 100%;
     line-height: 80px;
 }
 
-#contact:hover {
-    background-color: rgba(255, 255, 255, .5);
+.btn-group li:first-child {
+    margin-right: 25px;
 }
 
-
+.btn-group li {
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.btn-group li:hover {
+    background: rgba(255, 255, 255, .3);
+}
 
 .header-content {
     display: flex;
