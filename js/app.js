@@ -31,7 +31,6 @@ $(function() {
 function animation(){
   star();
   dog();
-  bone();
 }
 
   function star() {
@@ -42,7 +41,8 @@ function animation(){
     }, 5000).animate({
       left:"-30px",
       opacity: 1,
-      marginTop: '+=40px'
+      marginTop: '+=40px',
+      color: '#f00',
     }, 5000, function() {
       star();
     });
@@ -52,27 +52,14 @@ function animation(){
     $('#dec2').animate({
       left:"-30px",
       opacity: .6,
-      marginTop: '-=20px'
     }, 800).animate({
       left:"30px",
       opacity: 1,
-      marginTop: "0px"
     }, 800, function() {
       dog();
     });
   }
 
-  function bone() {
-    $('#dec3').animate({
-      top: "-=150px",
-      left: "-=30px"
-    }, 800).animate({
-      top: "+=150px",
-      left: "+=40px"
-    }, 800, function(){
-      bone();
-    });
-  }
 
 
 
