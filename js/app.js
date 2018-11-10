@@ -60,7 +60,21 @@ function animation(){
     });
   }
 
+// ドロワーメニューの開閉
+$('.js-hamburger').on('click', function() {
+  let isActive = $(this).hasClass('on');
+  toggleDrower(isActive);
+});
 
+function toggleDrower(isActive) {
+  if(isActive){
+    $('#drower-bg').fadeOut(600);
+  } else {
+    $('#drower-bg').fadeIn(600);
+  }
+  $('.js-hamburger').toggleClass('on');
+  $('.js-drower').toggleClass('on');
+}
 
 
 $(function(){

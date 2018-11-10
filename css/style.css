@@ -142,7 +142,7 @@ header {
 }
 
 #drower-bg {
-    /*display: none;*/
+    display: none;
     position: fixed;
     top: 80px;
     right: 0;
@@ -152,9 +152,10 @@ header {
 }
 
 .drower {
+
     position: absolute;
     top: 80px;
-    left: 0;
+    left: -200px;
     width: 200px;
     height: 400px;
     background-color: rgba(0, 0, 0, .5);
@@ -162,7 +163,7 @@ header {
 }
 
 .drower.on {
-    right: 0;
+    left: 0;
     transition-duration: 600ms;
 
 }
