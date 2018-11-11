@@ -83,9 +83,6 @@ if(localStorage.getItem('userMessage')){
   for (let userMsg of data.userMsg){
     displayMsg(userMsg);
   }
-  for (let dt of data.dateNow){
-    displayDate(dt);
-  }
 
 } else {
   data = {
@@ -154,16 +151,14 @@ $('#js-modal-form-button').on('click', function() {
     if (isMessage) {
       let userMsg  = $('textarea#message').val();
       // console.log(`${data.userMsg}というメッセージが送信されました`);
-      let dt = new Date();
+      let dtWritten = new Date();
         console.log(dt);
       data.userMsg.push(userMsg);
-      data.dateNow.push(dt);
+      data.dateNow.push(dtWritten);
 
       displayMsg(userMsg);
-      displayDate(dt);
 
       localStorage.setItem('userMessage', JSON.stringify(data));
-
     } else {
       return;
     }
@@ -182,30 +177,28 @@ function displayMsg(userMsg){
       let span = $('<span>').html(deleteIcon).addClass('js-trash-btn'); //jQueryでhtmlを入れるメソッドはhtml()
         remove.append(span);
       li.append(content).append(remove);
+
+      let num = data.userMsg.indexOf(userMsg);
+      let dt = data.dateNow[num];
+
+      let time = $('<h3>').addClass('js-user-msg-date');
+      li.append(time).text(dt);
+      li.append(content).append(remove);
       msgLocation.append(li);
 
-      // let num = data.userMsg.indexOf(userMsg);
-      //   console.log(num);
-      // displayDate(dt);
-}
-
-function displayDate(dt) {
-      // let year = dt.getFullYear();
-      // let month = dt.getMonth()+1;
-      // let day = dt.getDate();
-      // let hours = dt.getHours();
-      // let mnt = dt.getMinutes();
-      let today = Date(dt);
-      let time = $('<h3>').addClass('js-user-msg-date');
-        time.text(today);
-      $('.js-user-msg').prepend(time);
 }
 
 $('.js-trash-btn').on('click', function() {
-  let content = $(this).parent().parent();
+  let contentToRemove = $(this).parent().parent();
+  let content = $(this).parent().prev().text();
     console.log(content);
-  content.remove();
-
+  let contentNum = data.userMsg.indexOf(content);
+    console.log(contentNum);
+  contentToRemove.remove();
+  data.userMsg.splice(contentNum, 1);
+  data.dateNow.splice(contentNum, 1);
+    console.log(data);
+  localStorage.setItem('userMessage', JSON.stringify(data));
 });
 
 
