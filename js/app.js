@@ -1,8 +1,18 @@
+
+let slidesPerView = 3;
+let direction = 'horizontal';
+
+$(window).on('load resize', function() {
+  let width = window.innerWidth;
+  if (width < 960) {
+    slidesPerView = 2;
+  };
+
 new Swiper('.swiper-container', {
         // Optional parameters 他にもパラメタをつけたいときは、APIのeffectで確認できる。
-        direction: 'horizontal',
+        direction: direction,
         loop: true,
-        slidesPerView: 3,
+        slidesPerView: slidesPerView,
 
         // If we need pagination
         pagination: {
@@ -20,6 +30,7 @@ new Swiper('.swiper-container', {
           el: '.swiper-scrollbar',
         },
       });
+}); /*ブラウザ画面のリサイズとリロード*/
 
 
 $(function() {

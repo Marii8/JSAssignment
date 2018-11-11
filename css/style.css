@@ -363,3 +363,24 @@ main {
 .js-trash span {
     cursor: pointer;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+    .top-container {
+        height: 500px;
+    }
+
+    .top-bg {
+        height: 400px;
+    }
+
+    .top-bg-black {
+        height: 500px;
+    }
+
+    .swiper-container {
+    width: 640px;
+    }
+}
+
