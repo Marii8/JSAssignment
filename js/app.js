@@ -82,7 +82,6 @@ $(function(){
 if(localStorage.getItem('userMessage')){
     data = JSON.parse(localStorage.getItem('userMessage'));
   console.log(data.userMsg);
-
 } else {
   data = {
     userMsg: [],
@@ -141,17 +140,24 @@ function closeModal() {
 // });
 
 $('#js-modal-form-button').on('click', function() {
+    let isMessage = $(this).hasClass('message');
+    console.log(`message送信ボタンが押されたか？${isMessage}`);
+    if (isMessage) {
+      let userMsg  = $('textarea#message').val();
+      data.userMsg.push(userMsg);
+      console.log(`${data.userMsg}というメッセージが送信されました`);
 
-    let k = $(this).hasClass('message');
-    console.log(`message送信ボタンが押されたか？${k}`);
-  let userMsg = $('textarea#message').val();
-    console.log(userMsg);
-  data.userMsg.push(userMsg);
-    console.log(data.userMsg);
-  localStorage.setItem('userMessage', JSON.stringify(data));
-  let s = $('#js-user-message').append('li').text(userMsg);
+      let msg = $('<li>').addClass('js-user-msg');
 
-  console.log(s);
+      $('#js-user-message').prepend(msg);
+      // $('js-user-msg').append('h3').addClass('js-user-msg-date');
+      // $('js-user-msg').append('p').text(userMsg);
+      // $('js-user-msg').append('div').addClass('js-user-msg-delete').innerHTML('<span><i class="fas fa-trash-alt"></i></span>');
+      // localStorage.setItem('userMessage', JSON.stringify(data));
+    } else {
+      console.log(3);
+    }
+
 
 
   return false;
