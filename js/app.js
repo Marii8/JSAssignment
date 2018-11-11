@@ -21,8 +21,6 @@ new Swiper('.swiper-container', {
         },
       });
 
-let data;
-
 
 $(function() {
   setTimeout('animation()', 500)//ロードされたらアニメーションを実行
@@ -66,6 +64,7 @@ $('.js-hamburger').on('click', function() {
   toggleDrower(isActive);
 });
 
+
 function toggleDrower(isActive) {
   if(isActive){
     $('#drower-bg').fadeOut(600);
@@ -76,18 +75,25 @@ function toggleDrower(isActive) {
   $('.js-drower').toggleClass('on');
 }
 
+let data;
 
 $(function(){
-
 if(localStorage.getItem('userMessage')){
     data = JSON.parse(localStorage.getItem('userMessage'));
-  console.log(data.userMsg);
+  // for (let dt of data.dateNow){
+  //   displayDate(dt);
+  // }
+  for (let userMsg of data.userMsg){
+    displayMsg(userMsg);
+  }
+
 } else {
   data = {
     dateNow: [],
     userMsg: [],
   };
 }
+
 
 $('.js-message, .js-login').on('click', function() {
     // console.log('button pressed!');
@@ -140,7 +146,6 @@ function closeModal() {
 
 // });
 
-let deleteIcon = '<i class="fas fa-trash-alt"></i>';
 
 
 $('#js-modal-form-button').on('click', function() {
@@ -148,49 +153,49 @@ $('#js-modal-form-button').on('click', function() {
     console.log(`message送信ボタンが押されたか？${isMessage}`);
     if (isMessage) {
       let userMsg  = $('textarea#message').val();
-      console.log(`${data.userMsg}というメッセージが送信されました`);
-
+      // console.log(`${data.userMsg}というメッセージが送信されました`);
       let dt = new Date();
-        let year = dt.getFullYear();
-        let month = dt.getMonth()+1;
-        let day = dt.getDate();
-        let hours = dt.getHours();
-        let mnt = dt.getMinutes();
-      let today = Date(year, month, day, hours, mnt);
-      console.log(today);
+        console.log(dt);
+      data.userMsg.push(userMsg);
+      data.dateNow.push(dt);
 
+      displayMsg(userMsg);
+      displayDate(dt);
+
+      localStorage.setItem('userMessage', JSON.stringify(data));
+
+    } else {
+      return;
+    }
+  return false;
+
+});
+
+
+function displayMsg(userMsg){
+      let deleteIcon = '<i class="fas fa-trash-alt"></i>';
       let msgLocation = $('#msg-container');
-
-      let newMsg = $('<li>').addClass('js-user-msg');
-      let time = $('<h3>').addClass('js-user-msg-date');
-        time.text(today);
+      let li = $('<li>').addClass('js-user-msg');
       let content = $('<p>').addClass('js-user-msg-text');
         content.text(userMsg);
       let remove = $('<div>').addClass('js-trash');
       let span = $('<span>').html(deleteIcon); //jQueryでhtmlを入れるメソッドはhtml()
         remove.append(span);
-      newMsg.append(time).append(content).append(remove);
-      msgLocation.append(newMsg);
+      li.append(content).append(remove);
+      msgLocation.append(li);
+}
 
-
-
-      data.dateNow.push(today);
-      data.userMsg.push(userMsg);
-
-      // localStorage.setItem('userMessage', JSON.stringify(data));
-    } else {
-      console.log(3);
-    }
-
-
-
-  return false;
-
-
-});
-
-
-
+function displayDate(dt) {
+      // let year = dt.getFullYear();
+      // let month = dt.getMonth()+1;
+      // let day = dt.getDate();
+      // let hours = dt.getHours();
+      // let mnt = dt.getMinutes();
+      let today = Date(dt);
+      let time = $('<h3>').addClass('js-user-msg-date');
+        time.text(today);
+      $('.js-user-msg').append(time);
+}
 
 
 
