@@ -348,8 +348,11 @@ main {
 
 .js-user-msg-date,
 .js-user-msg-text{
-    text-align: center;
+    display: block;
+    width: 100%;
+    text-align: left; /*値　https://developer.mozilla.org/ja/docs/Web/CSS/text-align*/
     margin-bottom: 5px;
+    word-wrap: break-word; /*p内の文章がoverflowするので、右端で折り返す。normal, break-word*/
 }
 
 .js-trash {

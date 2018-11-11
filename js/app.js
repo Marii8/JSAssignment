@@ -152,7 +152,7 @@ $('#js-modal-form-button').on('click', function() {
       let userMsg  = $('textarea#message').val();
       // console.log(`${data.userMsg}というメッセージが送信されました`);
       let dtWritten = new Date();
-        console.log(dt);
+        console.log(dtWritten);
       data.userMsg.push(userMsg);
       data.dateNow.push(dtWritten);
 
@@ -189,20 +189,25 @@ function displayMsg(userMsg){
 }
 
 $('.js-trash-btn').on('click', function() {
-  let contentToRemove = $(this).parent().parent();
-  let content = $(this).parent().prev().text();
-    console.log(content);
-  let contentNum = data.userMsg.indexOf(content);
-    console.log(contentNum);
-  contentToRemove.remove();
-  data.userMsg.splice(contentNum, 1);
-  data.dateNow.splice(contentNum, 1);
-    console.log(data);
-  localStorage.setItem('userMessage', JSON.stringify(data));
+  let SureToDelete = window.confirm('メッセージを削除します。\n本当に削除しますか？');
+    console.log(SureToDelete);
+  if (SureToDelete) {
+    let contentToRemove = $(this).parent().parent();
+    let content = $(this).parent().prev().text();
+      console.log(content);
+    let contentNum = data.userMsg.indexOf(content);
+      console.log(contentNum);
+    contentToRemove.remove();
+    data.userMsg.splice(contentNum, 1);
+    data.dateNow.splice(contentNum, 1);
+      console.log(data);
+    localStorage.setItem('userMessage', JSON.stringify(data));
+  } else {
+    console.log('削除をキャンセルしました。');
+    return;
+  }
+
 });
-
-
-
 
 
 
