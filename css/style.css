@@ -152,7 +152,6 @@ header {
 }
 
 .drower {
-
     position: absolute;
     top: 80px;
     left: -200px;
@@ -160,12 +159,25 @@ header {
     height: 400px;
     background-color: rgba(0, 0, 0, .5);
     transition-duration: 600ms;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
+.drower li {
+    padding: 10px;
+}
+
+.drower li:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.drower li > i {
+    margin-right: 10px;
+}
 .drower.on {
     left: 0;
     transition-duration: 600ms;
-
 }
 
 
@@ -310,6 +322,29 @@ main {
     width: 305px;
 }
 
+.user-message-list {
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
 
+}
 
-@media screen
+.js-user-msg {
+    border: solid rgba(0, 0, 0, 0.3);
+    padding: 15px;
+}
+
+.js-user-msg-date {
+    margin-bottom: 10px;
+}
+
+.js-user-msg-date,
+.js-user-msg-text{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.js-user-msg-delete {
+    display: flex;
+    flex-direction: row-reverse;
+}

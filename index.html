@@ -42,10 +42,10 @@
         <!-- ドロワー -->
             <div id="drower-bg"></div>
             <ul class="drower js-drower">
-                <li class="js-register">メッセージ</li>
-                <li class="js-login">ログイン</li>
+                <li class="js-register js-message"><i class="fas fa-envelope-square"></i>メッセージ</li>
+                <li class="js-login"><i class="fas fa-check"></i>ログイン</li>
             </ul>
-            <div class='logo'>
+            <div class='logo js-logo'>
                 <p>LOGO</p>
             </div>
         </div>
@@ -99,13 +99,18 @@
             <div class="swiper-scrollbar"></div>
             </div>
 
-            </div class='user-massage-list'>
-                <h2 class="subtitle">皆様からのメッセージ</h2>
+            <div class='user-message-list'>
+                <h2 class="subtitle"> ユーザーメッセージ</h2>
                 <ul id="js-user-message">
-                    <li>test</li>
+                    <li class="js-user-msg">
+                        <h3 class="js-user-msg-date">testDate</h3>
+                        <p class="js-user-msg-text">test</p>
+                        <div class='js-user-msg-delete'>
+                            <span><i class="fas fa-trash-alt"></i></span>
+                        </div>
+                    </li>
                 </ul>
-            <div>
-        </div>
+            </div>
 
     </main>
 
