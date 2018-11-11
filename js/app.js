@@ -84,6 +84,7 @@ if(localStorage.getItem('userMessage')){
   console.log(data.userMsg);
 } else {
   data = {
+    dateNow: [],
     userMsg: [],
   };
 }
@@ -139,20 +140,43 @@ function closeModal() {
 
 // });
 
+let deleteIcon = '<i class="fas fa-trash-alt"></i>';
+
+
 $('#js-modal-form-button').on('click', function() {
     let isMessage = $(this).hasClass('message');
     console.log(`message送信ボタンが押されたか？${isMessage}`);
     if (isMessage) {
       let userMsg  = $('textarea#message').val();
-      data.userMsg.push(userMsg);
       console.log(`${data.userMsg}というメッセージが送信されました`);
 
-      let msg = $('<li>').addClass('js-user-msg');
+      let dt = new Date();
+        let year = dt.getFullYear();
+        let month = dt.getMonth()+1;
+        let day = dt.getDate();
+        let hours = dt.getHours();
+        let mnt = dt.getMinutes();
+      let today = Date(year, month, day, hours, mnt);
+      console.log(today);
 
-      $('#js-user-message').prepend(msg);
-      // $('js-user-msg').append('h3').addClass('js-user-msg-date');
-      // $('js-user-msg').append('p').text(userMsg);
-      // $('js-user-msg').append('div').addClass('js-user-msg-delete').innerHTML('<span><i class="fas fa-trash-alt"></i></span>');
+      let msgLocation = $('#msg-container');
+
+      let newMsg = $('<li>').addClass('js-user-msg');
+      let time = $('<h3>').addClass('js-user-msg-date');
+        time.text(today);
+      let content = $('<p>').addClass('js-user-msg-text');
+        content.text(userMsg);
+      let remove = $('<div>').addClass('js-trash');
+      let span = $('<span>').html(deleteIcon); //jQueryでhtmlを入れるメソッドはhtml()
+        remove.append(span);
+      newMsg.append(time).append(content).append(remove);
+      msgLocation.append(newMsg);
+
+
+
+      data.dateNow.push(today);
+      data.userMsg.push(userMsg);
+
       // localStorage.setItem('userMessage', JSON.stringify(data));
     } else {
       console.log(3);

@@ -329,9 +329,14 @@ main {
 
 }
 
-.js-user-msg {
-    border: solid rgba(0, 0, 0, 0.3);
+.msg-container {
     padding: 15px;
+}
+
+.js-user-msg {
+    border: solid 2px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    margin-bottom: 5px;
 }
 
 .js-user-msg-date {
@@ -344,7 +349,11 @@ main {
     margin-bottom: 5px;
 }
 
-.js-user-msg-delete {
+.js-trash {
     display: flex;
     flex-direction: row-reverse;
+}
+
+.js-trash span {
+    cursor: pointer;
 }
