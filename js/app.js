@@ -80,11 +80,11 @@ let data;
 $(function(){
 if(localStorage.getItem('userMessage')){
     data = JSON.parse(localStorage.getItem('userMessage'));
-  // for (let dt of data.dateNow){
-  //   displayDate(dt);
-  // }
   for (let userMsg of data.userMsg){
     displayMsg(userMsg);
+  }
+  for (let dt of data.dateNow){
+    displayDate(dt);
   }
 
 } else {
@@ -179,10 +179,14 @@ function displayMsg(userMsg){
       let content = $('<p>').addClass('js-user-msg-text');
         content.text(userMsg);
       let remove = $('<div>').addClass('js-trash');
-      let span = $('<span>').html(deleteIcon); //jQueryでhtmlを入れるメソッドはhtml()
+      let span = $('<span>').html(deleteIcon).addClass('js-trash-btn'); //jQueryでhtmlを入れるメソッドはhtml()
         remove.append(span);
       li.append(content).append(remove);
       msgLocation.append(li);
+
+      // let num = data.userMsg.indexOf(userMsg);
+      //   console.log(num);
+      // displayDate(dt);
 }
 
 function displayDate(dt) {
@@ -194,8 +198,16 @@ function displayDate(dt) {
       let today = Date(dt);
       let time = $('<h3>').addClass('js-user-msg-date');
         time.text(today);
-      $('.js-user-msg').append(time);
+      $('.js-user-msg').prepend(time);
 }
+
+$('.js-trash-btn').on('click', function() {
+  let content = $(this).parent().parent();
+    console.log(content);
+  content.remove();
+
+});
+
 
 
 

@@ -10,14 +10,15 @@
 header {
     width: 100%;
     height: 80px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(179, 211, 172, .5);
     color: #fff;
-
     display: flex;
     justify-content: space-between;
+    z-index: 5;
+
 }
 
 .header-content {
@@ -108,15 +109,15 @@ header {
 
 .hamburger span:before {
     content: "";
-    position: absolute;;
-    left: 0;
-    top: 9px;
-}
-.hamburger span:after {
-    content: "";
     position: absolute;
     left: 0;
     top: -9px;
+}
+.hamburger span:after {
+    content: "";
+    position: absolute;;
+    left: 0;
+    top: 9px;
 }
 
 .hamburger span,
@@ -148,7 +149,7 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .5)
+    background-color: rgba(0, 0, 0, .5);
 }
 
 .drower {
@@ -161,6 +162,7 @@ header {
     transition-duration: 600ms;
     padding: 15px;
     box-sizing: border-box;
+    z-index: 51;
 }
 
 .drower li {
@@ -192,6 +194,7 @@ header {
 
 main {
     background: #e1cea3;
+    z-index: 4;
 }
 
 
