@@ -1,11 +1,18 @@
 
-let slidesPerView = 3;
-let direction = 'horizontal';
+let slidesPerView;
+let direction;
 
 $(window).on('load resize', function() {
   let width = window.innerWidth;
-  if (width < 960) {
+  if (width >= 960) {
+    slidesPerView = 3;
+    direction = 'horizontal';
+  } else if (width > 620 && width < 960) {
     slidesPerView = 2;
+    direction = 'horizontal';
+  } else {
+    slidesPerView = 1;
+    direction = 'vertical';
   };
 
 new Swiper('.swiper-container', {
@@ -138,8 +145,6 @@ function closeModal() {
   $('.modal-content').fadeOut(600);
 }
 
-
-
 // テキストエリアの値を取得して、「皆様からのメッセージ」の下に表示したいけど、値が取れているのか不明。
 // $('#js-modal-form-button').on('click', function() {
 //     let k = $(this).hasClass('message');
@@ -150,8 +155,6 @@ function closeModal() {
 //     console.log(data.userMsg);
 //   localStorage.setItem('userMessage', JSON.stringify(data));
 //   $('#js-user-message').append(li).text(userMsg);
-
-
 // });
 
 
@@ -162,6 +165,7 @@ $('#js-modal-form-button').on('click', function() {
     if (isMessage) {
       let userMsg  = $('textarea#message').val();
       // console.log(`${data.userMsg}というメッセージが送信されました`);
+      // $('textarea#message').val() = "";
       let dtWritten = new Date();
         console.log(dtWritten);
       data.userMsg.push(userMsg);
@@ -170,10 +174,10 @@ $('#js-modal-form-button').on('click', function() {
       displayMsg(userMsg);
 
       localStorage.setItem('userMessage', JSON.stringify(data));
-    } else {
-      return;
-    }
-  return false;
+    } //else {
+    //   return;
+    // }
+  // return false;
 
 });
 
